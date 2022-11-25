@@ -2,7 +2,11 @@
 
 
 @livewire('image-tile')
+@livewire('image-tile')
+@livewire('image-tile')
+@livewire('image-tile')
 
+{{-- https://laravel-livewire.com/screencasts/s8-dragging-list <- try this tutorial --}}
 
 
 </div>
