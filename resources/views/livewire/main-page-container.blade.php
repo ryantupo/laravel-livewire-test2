@@ -1,12 +1,14 @@
 <div class="wrapper">
 
+    @livewire('test-drag')
 
-@livewire('image-tile')
-@livewire('image-tile')
-@livewire('image-tile')
-@livewire('image-tile')
 
-{{-- https://laravel-livewire.com/screencasts/s8-dragging-list <- try this tutorial --}}
+    {{--  @livewire('image-tile')
+@livewire('image-tile')
+@livewire('image-tile')
+@livewire('image-tile')  --}}
+
+    {{-- https://laravel-livewire.com/screencasts/s8-dragging-list <- try this tutorial --}}
 
 
 </div>
