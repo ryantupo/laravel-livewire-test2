@@ -40,11 +40,13 @@
             })
 
             el.addEventListener('drop', e => {
-                console.log("drop");
+                e.target.classList.remove('bg-yellow-100')
+
+                //
             })
 
             el.addEventListener('dragenter', e => {
-                console.log("enter");
+                e.target.classList.add('bg-yellow-100')
 
                 e.preventDefault()
             })
@@ -55,7 +57,7 @@
             })
 
             el.addEventListener('dragleave', e => {
-                console.log("leave");
+                e.target.classList.remove('bg-yellow-100')
             })
 
             el.addEventListener('dragend', e => {
