@@ -1,16 +1,8 @@
 <div>
-
-    @php
-
-     $data ='[{"id":"1","title":"title1"}]';
-
-     $tasks = json_decode($data);
-    @endphp
-    <ul wire:sortable="updateTaskOrder">
+    <ul drag-root class="overflow-hidden rounded shadow divide-y content-center">
         @foreach ($tasks as $task)
-            <li wire:sortable.item="{{ $task->id }}" wire:key="task-{{ $task->id }}">
-                <h4 wire:sortable.handle>{{ $task->title }}</h4>
-                <button wire:click="removeTask({{ $task->id }})">Remove</button>
+            <li drag-item draggable="true" wire:key=`{{ $task['id'] }}` class="m-0 w-64 p-4 bg-grey-300">
+                {{ $task['title'] }}
             </li>
         @endforeach
     </ul>

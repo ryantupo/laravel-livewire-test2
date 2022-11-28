@@ -3,18 +3,17 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Task;
 
 class TestDrag extends Component
 {
 
-    // public $data ='[{"id":"1","title":"title1"}]';
-
-    // public $tasks = json_decode($data,true);
-
+    public $tasks;
 
 
     public function render()
     {
+        $this->tasks = Task::all();
         return view('livewire.test-drag');
     }
 }

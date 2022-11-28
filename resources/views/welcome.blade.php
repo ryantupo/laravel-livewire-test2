@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    @vite('resources/css/app.css')
 
     <title>Laravel</title>
 
@@ -29,6 +30,39 @@
 
 
     @livewire('main-page-container')
+
+    <script>
+        let root = document.querySelector('[drag-root]')
+
+        root.querySelectorAll('[drag-item]').forEach(el => {
+            el.addEventListener('dragstart', e => {
+                console.log("start");
+            })
+
+            el.addEventListener('drop', e => {
+                console.log("drop");
+            })
+
+            el.addEventListener('dragenter', e => {
+                console.log("enter");
+
+                e.preventDefault()
+            })
+
+            el.addEventListener('dragover', e => {
+
+                e.preventDefault()
+            })
+
+            el.addEventListener('dragleave', e => {
+                console.log("leave");
+            })
+
+            el.addEventListener('dragend', e => {
+                console.log("end");
+            })
+        })
+    </script>
 </body>
 
 </html>
